@@ -15,6 +15,15 @@ a {
   text-decoration: none;
 }
 
+.bg-dark {
+  background: #12002b;
+  height: auto;
+}
+
+.auto-height {
+  height: auto;
+}
+
 .banner {
   background-image: url(../../assets/bank-tree.jpeg);
   background-position: 0% 33%;
@@ -141,10 +150,4 @@ footer {
 .cards {
   display: flex;
   margin-bottom: 0.625rem;
-}
-
-#bg-dark {
-  background: #12002b;
-  height: 28.125rem;
-  padding: 3rem;
 }/*# sourceMappingURL=main.css.map */
