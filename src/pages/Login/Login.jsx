@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
 
-function SignIn() {
+function Login() {
   return (
     <div className="signin-page">
       <Header />
@@ -16,4 +16,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default Login;

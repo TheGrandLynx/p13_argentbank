@@ -8,7 +8,7 @@ function UserProfile() {
   return (
     <div className="profile-page">
       <Header />
-      <main className="autoHeight">
+      <main className="bg-dark">
         <User firstname="Tony" lastname="Jarvis" />
         <Account
           title="Argent Bank Checking (x8349)"
