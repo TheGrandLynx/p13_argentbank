@@ -20,5 +20,17 @@ header {
         margin-right: 0.5rem;
       }
     }
+    .connected {
+      display: flex;
+      gap: 1rem;
+      margin-right: 0.5rem;
+      & p {
+        font-weight: bold;
+      }
+      & i {
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+      }
+    }
   }
 }

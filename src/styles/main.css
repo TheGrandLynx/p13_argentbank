@@ -73,6 +73,18 @@ header nav a i {
   font-size: 1.1rem;
   margin-right: 0.5rem;
 }
+header nav .connected {
+  display: flex;
+  gap: 1rem;
+  margin-right: 0.5rem;
+}
+header nav .connected p {
+  font-weight: bold;
+}
+header nav .connected i {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
 
 footer {
   border-top: 2px solid #ccc;
