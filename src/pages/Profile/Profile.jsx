@@ -10,7 +10,6 @@ function UserProfile() {
   const token = useSelector((state) => state.auth.token);
   const dispatch = useDispatch();
 
-  /* Asynchronous function that retrieves user data and updates it with useEffect */
   useEffect(() => {
     if (token) {
       const userData = async () => {
@@ -27,10 +26,7 @@ function UserProfile() {
           );
           if (response.ok) {
             const data = await response.json();
-            /* 
-                          Checking that the query response is indeed retrieved
-                          console.log(data) 
-                      */
+
             const userData = {
               createdAt: data.body.createdAt,
               updatedAt: data.body.updatedAt,
@@ -40,7 +36,7 @@ function UserProfile() {
               lastname: data.body.lastName,
               username: data.body.userName,
             };
-            /* Return user data in redux state */
+            //Return user data in redux state
             dispatch(userProfile(userData));
           } else {
             console.log("error while retrieving profile");
@@ -56,7 +52,7 @@ function UserProfile() {
     <div className="profile-page">
       <Header />
       <main className="bg-dark">
-        <User firstname="Tony" lastname="Jarvis" />
+        <User />
         {accountData.map((data) => (
           <Account
             key={data.id}

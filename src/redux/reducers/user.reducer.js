@@ -1,6 +1,7 @@
 import {
   GET_USERPROFILE,
-  EDIT_USERNAME,
+  EDIT_FIRSTNAME,
+  EDIT_LASTNAME,
   LOGOUT,
 } from "../actions/type.actions";
 
@@ -17,13 +18,23 @@ export const userReducer = (state = initialState, action) => {
         status: "SUCCEEDED",
         userData: action.payload,
       };
-    case EDIT_USERNAME:
+
+    case EDIT_FIRSTNAME:
       return {
         ...state,
         status: "MODIFIED",
         userData: {
           ...state.userData,
-          username: action.payload,
+          firstname: action.payload,
+        },
+      };
+    case EDIT_LASTNAME:
+      return {
+        ...state,
+        status: "MODIFIED",
+        userData: {
+          ...state.userData,
+          lastname: action.payload,
         },
       };
     case LOGOUT: {

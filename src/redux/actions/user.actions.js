@@ -1,4 +1,4 @@
-import { GET_USERPROFILE, EDIT_USERNAME } from "./type.actions";
+import { GET_USERPROFILE, EDIT_LASTNAME, EDIT_FIRSTNAME } from "./type.actions";
 
 export const userProfile = (userData) => {
   return {
@@ -7,9 +7,16 @@ export const userProfile = (userData) => {
   };
 };
 
-export const updateUsername = (username) => {
+export const updateFirstname = (firstname) => {
   return {
-    type: EDIT_USERNAME,
-    payload: username,
+    type: EDIT_FIRSTNAME,
+    payload: firstname,
+  };
+};
+
+export const updateLastname = (firstname) => {
+  return {
+    type: EDIT_LASTNAME,
+    payload: firstname,
   };
 };

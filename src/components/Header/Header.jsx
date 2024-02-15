@@ -5,14 +5,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/actions/auth.actions.js";
 
 function Header() {
-  const isConnected = useSelector((state) => state.auth.token);
-  const firstname = useSelector((state) => state.user.userData.firstname);
-
+  //update user data on header in function of state redux
+  let isConnected = useSelector((state) => state.auth.token);
+  let firstname = useSelector((state) => state.user.userData.firstname);
+  if (sessionStorage.length > 1) {
+    isConnected = true;
+    const userData = JSON.parse(sessionStorage.getItem("userData"));
+    firstname = userData.firstname;
+  }
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const logoutHandler = () => {
     dispatch(logout());
+    sessionStorage.clear();
     navigate("/");
   };
   return (
