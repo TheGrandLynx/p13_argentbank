@@ -1,5 +1,5 @@
 import { GET_USERPROFILE, EDIT_LASTNAME, EDIT_FIRSTNAME } from "./type.actions";
-
+//soutenance 1.5
 export const userProfile = (userData) => {
   return {
     type: GET_USERPROFILE,

@@ -15,6 +15,7 @@ function Home() {
     "icon-security.png": iconSecurity,
   };
   return (
+    //soutenance 2
     <div className="homepage">
       <Header />
       <main>

@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store.js";
 
 function App() {
+  //soutenance 1
   return (
     <Provider store={store}>
       <Router>

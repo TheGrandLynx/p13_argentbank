@@ -7,6 +7,8 @@ import {
 import { isValidName } from "../../Utils/inputValidation.js";
 
 function User() {
+  //soutenance 6
+
   let token = useSelector((state) => state.auth.token);
   if (!token) {
     token = sessionStorage.getItem("token");

@@ -5,6 +5,7 @@ import { loginFailed, loginSuccess } from "../../redux/actions/auth.actions.js";
 import { isValidEmail, isValidPassword } from "../../Utils/inputValidation.js";
 
 function Form() {
+  //soutenance 4
   //if the remember me checkbox is checked we prefill the fields with the data of the local store
   const [email, setEmail] = useState(
     localStorage.getItem("userEmail") ? localStorage.getItem("userEmail") : ""

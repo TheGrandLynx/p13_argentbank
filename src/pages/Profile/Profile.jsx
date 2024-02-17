@@ -5,11 +5,14 @@ import User from "../../components/User/User";
 import Account from "../../components/Account/Account";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import NotConnected from "../../components/NotConnected/NotConnected.jsx";
 import accountData from "../../data/accountData.json";
 function UserProfile() {
   const token = useSelector((state) => state.auth.token);
-  const dispatch = useDispatch();
+  let isConnected = useSelector((state) => state.auth.token);
 
+  const dispatch = useDispatch();
+  //soutenance 5
   useEffect(() => {
     if (token) {
       const userData = async () => {
@@ -51,17 +54,24 @@ function UserProfile() {
   return (
     <div className="profile-page">
       <Header />
-      <main className="bg-dark">
-        <User />
-        {accountData.map((data) => (
-          <Account
-            key={data.id}
-            title={data.title}
-            amount={data.amount}
-            description={data.description}
-          />
-        ))}
-      </main>
+
+      {isConnected ? (
+        <main className="bg-dark">
+          <User />
+          {accountData.map((data) => (
+            <Account
+              key={data.id}
+              title={data.title}
+              amount={data.amount}
+              description={data.description}
+            />
+          ))}
+        </main>
+      ) : (
+        <main className="notConnectedContainer">
+          <NotConnected />
+        </main>
+      )}
       <Footer />
     </div>
   );

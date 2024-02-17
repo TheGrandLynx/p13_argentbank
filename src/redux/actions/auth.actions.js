@@ -1,5 +1,5 @@
 import { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } from "./type.actions";
-
+//soutenance 1.3
 export const loginSuccess = (token) => {
   return {
     type: LOGIN_SUCCESS,

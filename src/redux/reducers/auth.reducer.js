@@ -6,7 +6,7 @@ const initialState = {
   token: null,
   error: null,
 };
-
+//soutenance 1.2
 export const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_SUCCESS:

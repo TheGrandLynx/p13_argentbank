@@ -9,7 +9,7 @@ const initialState = {
   status: "VOID",
   userData: {},
 };
-
+//soutenance 1.4
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_USERPROFILE:
