@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
+import { Navigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { userProfile } from "../../redux/actions/user.actions.js";
 import User from "../../components/User/User";
 import Account from "../../components/Account/Account";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import NotConnected from "../../components/NotConnected/NotConnected.jsx";
+//import NotConnected from "../../components/NotConnected/NotConnected.jsx";
 import accountData from "../../data/accountData.json";
+
 function UserProfile() {
   const token = useSelector((state) => state.auth.token);
   let isConnected = useSelector((state) => state.auth.token);
+  //const navigate = useNavigate();
 
   const dispatch = useDispatch();
   //soutenance 5
@@ -68,9 +71,7 @@ function UserProfile() {
           ))}
         </main>
       ) : (
-        <main className="notConnectedContainer">
-          <NotConnected />
-        </main>
+        <Navigate to="/login" />
       )}
       <Footer />
     </div>
